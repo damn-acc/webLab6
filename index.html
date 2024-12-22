@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Input Page</title>
+    <script defer src="form_script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="header-title">WebLab6</h1>
+        </div>
+    </header>
+    <main class="main-content">
+        <nav class="sidebar">
+            <ul class="navigation-list">
+                <li><a href="index.html">Input page</a></li>
+                <li><a href="index2.html">Carousel page</a></li>
+            </ul>
+        </nav>
+        <section class="content-1">
+            <div class="info-block">
+                <p>Enter the URL of the image and description to add a new slide to the carousel.</p>
+            </div>
+            <section class="content-2">
+                <div class="form-container">
+                    <form id="addSlideForm" class="addSlideForm">
+                        <label for="imageUrl" class="form-label">URL:</label>
+                        <input type="url" id="imageUrl" class="form-input" placeholder="Input image URL" required>
+                    
+                        <button type="submit" class="form-button">Add slide</button>
+                    </form>
+                    <div id="status-message" class="status-message" aria-live="polite"></div>
+                </div>                
+                <div class="extra-block">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam provident impedit quibusdam voluptatibus eius id in perferendis sit. Suscipit, ducimus?</p>
+                </div>
+            </section> 
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p>Created by Yehor Bilous | New Design</p>
+        </div>
+    </footer>
+</body>
+</html>

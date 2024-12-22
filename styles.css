@@ -1,0 +1,278 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Body Styling */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+    background-color: #fdecc0;
+    overflow-x: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(202, 202, 202, 0.5);
+    border-radius: 10px;
+}
+
+/* Header */
+header {
+    background-color: #f34a5b;
+    color: #ffffff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    line-height: 1.2;
+}
+
+/* Main Layout */
+.main-content {
+    display: flex;
+    flex: 1;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    background-color: rgba(88, 51, 191, 0.7);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    max-width: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.navigation-list {
+    color: white;
+    list-style: circle;
+    padding: 0;
+}
+
+.navigation-list li {
+    margin-bottom: 1rem;
+}
+
+.navigation-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.125rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.navigation-list a:hover {
+    color: #b7ff00;
+}
+
+/* Content Section */
+.content-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Blocks inside Content Section */
+.content-2 {
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+.info-block, .extra-block {
+    background-color: rgba(88, 51, 191, 0.7);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.extra-block {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+/* Carousel Styling */
+.carousel-container {
+    background-color: rgba(88, 51, 191, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.carousel {
+    overflow: hidden;
+    background-color: rgba(66, 34, 192, 0);
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.carousel-item img {
+    max-height: 90%;
+    max-width: 90%;
+}
+
+.carousel-btn {
+    background-color: #e44848;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+/* Form Styling */
+.form-container {
+    width: 70%;
+    background-color: rgba(88, 51, 191, 0.7);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.addSlideForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-label {
+    color: white;
+    font-size: 1.125rem;
+    text-align: left;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-button {
+    background-color: #f34a5b;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.form-button:hover {
+    background-color: #ff6a7c;
+}
+
+/* Footer */
+footer {
+    background-color: #f34a5b;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Responsive Design */
+@media (max-aspect-ratio: 4/3) {
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .sidebar {
+        max-width: 100%;
+    }
+
+    .main-content {
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+    
+    .extra-block {
+        width: 100%;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .carousel-container {
+        height: 50vh;
+    }
+
+    .content-2 {
+        flex-direction: column;
+    }
+}
